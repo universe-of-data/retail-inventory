@@ -1,0 +1,31 @@
+{
+	"name": "DataSource3Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "DatabaseConnector",
+				"description": "This pipeline while get the sourcedata from Azure database for MySQL (via Azure Data Studio) to Azure SQL Database in which database connector is implemented, here a jar file should also be uploaded in databricks",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/keerthanaakkula@gmail.com/CustomerData_DatabaseConnector.py"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-06-19T16:16:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

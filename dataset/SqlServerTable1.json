@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SourceSalesTransactions"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

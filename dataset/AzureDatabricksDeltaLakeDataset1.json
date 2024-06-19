@@ -1,0 +1,38 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLakeLinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "my_database",
+			"table": "monthly_customer_purchases"
+		},
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "integer"
+			},
+			{
+				"name": "Year",
+				"type": "integer"
+			},
+			{
+				"name": "Month",
+				"type": "integer"
+			},
+			{
+				"name": "TotalPurchases",
+				"type": "long"
+			},
+			{
+				"name": "AveragePurchaseQuantity",
+				"type": "double"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

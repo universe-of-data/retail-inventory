@@ -1,0 +1,46 @@
+{
+	"name": "SnowflakeTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SnowflakeLinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "CUSTOMERID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "YEAR",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "MONTH",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "TOTALPURCHASES",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "AVERAGEPURCHASEQUANTITY",
+				"type": "FLOAT"
+			}
+		],
+		"typeProperties": {
+			"schema": "SNOWFLAKESCHEMA",
+			"table": "CUSTOMER_PURCHASES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

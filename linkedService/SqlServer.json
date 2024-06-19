@@ -1,0 +1,24 @@
+{
+	"name": "SqlServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "RAKSHITHA",
+			"database": "salesdatabase",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "Windows",
+			"userName": "RAKSHITHA\\raksh",
+			"password": {
+				"type": "SecureString",
+				"value": "**********"
+			}
+		},
+		"connectVia": {
+			"referenceName": "OnpremSelfhostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
