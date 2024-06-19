@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mydatafactoryspace"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLakeLinkedservice_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics_password": {
+			"value": ""
+		},
+		"SnowflakeLinkedservice_password": {
+			"value": ""
+		},
+		"SqlServer_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsrakshitha.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0617-170452-lsnfmp78"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "azureserverrakshitha.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "SqlDatabase"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "rakshitha"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_server": {
+			"value": "mywkrakshi.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_database": {
+			"value": "dedcatedsqlpool"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"SnowflakeLinkedservice_properties_typeProperties_database": {
+			"value": "SNOWFLAKEDATABASE"
+		},
+		"SqlServer_properties_typeProperties_server": {
+			"value": "RAKSHITHA"
+		},
+		"SqlServer_properties_typeProperties_database": {
+			"value": "salesdatabase"
+		},
+		"SqlServer_properties_typeProperties_userName": {
+			"value": "RAKSHITHA\\raksh"
+		},
+		"linkedService1_sasUri": {
+			"value": ""
+		},
+		"linkedService2_sasUri": {
+			"value": ""
+		},
+		"snowflakedemo_sasUri": {
+			"value": ""
+		}
+	}
+}

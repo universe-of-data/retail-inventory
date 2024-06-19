@@ -1,0 +1,216 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "mydatafactoryspace"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
+		"AzureDatabricksDeltaLakeLinkedservice_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLakeLinkedservice'"
+		},
+		"AzureSqlDatabase_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase'"
+		},
+		"AzureSynapseAnalytics_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSynapseAnalytics'"
+		},
+		"SnowflakeLinkedservice_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SnowflakeLinkedservice'"
+		},
+		"SqlServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsrakshitha.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0617-170452-lsnfmp78"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "azureserverrakshitha.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SqlDatabase"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "rakshitha"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mywkrakshi.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dedcatedsqlpool"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladminuser"
+		},
+		"SnowflakeLinkedservice_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SNOWFLAKEDATABASE"
+		},
+		"SqlServer_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "RAKSHITHA"
+		},
+		"SqlServer_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "salesdatabase"
+		},
+		"SqlServer_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "RAKSHITHA\\raksh"
+		},
+		"linkedService1_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'linkedService1'"
+		},
+		"linkedService2_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'linkedService2'"
+		},
+		"snowflakedemo_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'snowflakedemo'"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "mydatafactoryspace_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"AzureDatabricksDeltaLakeLinkedservice_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLakeLinkedservice_accessToken')]"
+					},
+					"AzureSqlDatabase_password": {
+						"value": "[parameters('AzureSqlDatabase_password')]"
+					},
+					"AzureSynapseAnalytics_password": {
+						"value": "[parameters('AzureSynapseAnalytics_password')]"
+					},
+					"SnowflakeLinkedservice_password": {
+						"value": "[parameters('SnowflakeLinkedservice_password')]"
+					},
+					"SqlServer_password": {
+						"value": "[parameters('SqlServer_password')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
+					},
+					"AzureSqlDatabase_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase_properties_typeProperties_userName')]"
+					},
+					"AzureSynapseAnalytics_properties_typeProperties_server": {
+						"value": "[parameters('AzureSynapseAnalytics_properties_typeProperties_server')]"
+					},
+					"AzureSynapseAnalytics_properties_typeProperties_database": {
+						"value": "[parameters('AzureSynapseAnalytics_properties_typeProperties_database')]"
+					},
+					"AzureSynapseAnalytics_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSynapseAnalytics_properties_typeProperties_userName')]"
+					},
+					"SnowflakeLinkedservice_properties_typeProperties_database": {
+						"value": "[parameters('SnowflakeLinkedservice_properties_typeProperties_database')]"
+					},
+					"linkedService1_sasUri": {
+						"value": "[parameters('linkedService1_sasUri')]"
+					},
+					"linkedService2_sasUri": {
+						"value": "[parameters('linkedService2_sasUri')]"
+					},
+					"snowflakedemo_sasUri": {
+						"value": "[parameters('snowflakedemo_sasUri')]"
+					},
+					"SqlServer_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer_properties_typeProperties_server')]"
+					},
+					"SqlServer_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer_properties_typeProperties_database')]"
+					},
+					"SqlServer_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "mydatafactoryspace_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'mydatafactoryspace_ArmTemplate_0')]"
+			]
+		}
+	]
+}
