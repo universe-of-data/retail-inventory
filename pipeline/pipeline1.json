@@ -38,8 +38,8 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "CustomerID",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								},
 								"sink": {
 									"name": "CUSTOMERID",
@@ -48,8 +48,8 @@
 							},
 							{
 								"source": {
-									"name": "Year",
-									"type": "String"
+									"type": "String",
+									"ordinal": 2
 								},
 								"sink": {
 									"name": "YEAR",
@@ -58,8 +58,8 @@
 							},
 							{
 								"source": {
-									"name": "Month",
-									"type": "String"
+									"type": "String",
+									"ordinal": 3
 								},
 								"sink": {
 									"name": "MONTH",
@@ -68,8 +68,8 @@
 							},
 							{
 								"source": {
-									"name": "TotalPurchases",
-									"type": "String"
+									"type": "String",
+									"ordinal": 4
 								},
 								"sink": {
 									"name": "TOTALPURCHASES",
@@ -78,8 +78,8 @@
 							},
 							{
 								"source": {
-									"name": "AveragePurchaseQuantity",
-									"type": "String"
+									"type": "String",
+									"ordinal": 5
 								},
 								"sink": {
 									"name": "AVERAGEPURCHASEQUANTITY",
