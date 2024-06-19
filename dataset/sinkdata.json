@@ -1,5 +1,5 @@
 {
-	"name": "sinkfuck",
+	"name": "sinkdata",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SnowflakeLinkedservice",

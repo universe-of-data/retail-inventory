@@ -91,13 +91,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sourcefuck",
+						"referenceName": "sourcedata",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "sinkfuck",
+						"referenceName": "sinkdata",
 						"type": "DatasetReference"
 					}
 				]

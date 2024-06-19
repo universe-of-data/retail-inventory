@@ -1,5 +1,5 @@
 {
-	"name": "sourcefuck",
+	"name": "sourcedata",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "snowflakedemo",
