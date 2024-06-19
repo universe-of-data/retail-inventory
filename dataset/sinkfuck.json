@@ -1,0 +1,16 @@
+{
+	"name": "sinkfuck",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SnowflakeLinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SNOWFLAKESCHEMA",
+			"table": "CUSTOMER_PURCHASES"
+		}
+	}
+}

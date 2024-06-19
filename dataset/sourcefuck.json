@@ -1,0 +1,45 @@
+{
+	"name": "sourcefuck",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "snowflakedemo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FinalData.csv",
+				"container": "samplecontainername"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\r",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Month",
+				"type": "String"
+			},
+			{
+				"name": "TotalPurchases",
+				"type": "String"
+			},
+			{
+				"name": "AveragePurchaseQuantity",
+				"type": "String"
+			}
+		]
+	}
+}
