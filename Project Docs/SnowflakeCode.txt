@@ -1,0 +1,104 @@
+
+
+-- Check if the database exists
+SHOW DATABASES LIKE 'SNOWFLAKEDATABASE';
+
+-- Check if the schema exists within the specified database
+USE DATABASE SNOWFLAKEDATABASE;
+SHOW SCHEMAS LIKE 'FINALTABLE';
+
+
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS SNOWFLAKEDATABASE;
+
+-- Create the schema if it doesn't exist within the specified database
+CREATE SCHEMA IF NOT EXISTS SNOWFLAKEDATABASE.FINALTABLE;
+
+
+-- Use the specified database
+USE DATABASE SNOWFLAKEDATABASE;
+
+-- Use the specified schema
+USE SCHEMA FINALTABLE;
+
+-- Create the cleaned_data table
+CREATE TABLE IF NOT EXISTS cleaned_data (
+    CustomerID INTEGER,
+    TransactionID INTEGER,
+    Name STRING,
+    Age INTEGER,
+    Gender STRING,
+    ProductID STRING,
+    Quantity INTEGER,
+    Timestamp TIMESTAMP,
+    PurchaseHistory STRING,
+    Preferences STRING,
+    TotalPurchases BIGINT,
+    AveragePurchaseQuantity DOUBLE
+);
+
+Select * from SNOWFLAKEDATABASE.FINALTABLE.cleaned_data limit 100;
+
+show warehouses
+
+-- Run this query to get the Snowflake URL
+SELECT current_account();
+
+-- Run this query to get your current role
+SELECT CURRENT_ROLE();
+
+
+-- Check if the database exists
+SHOW DATABASES LIKE 'SNOWFLAKEDATABASE';
+
+-- Check if the role exists
+SHOW ROLES LIKE 'ACCOUNTADMIN';
+
+-- Check if the warehouse exists
+SHOW WAREHOUSES LIKE 'COMPUTE_WH';
+
+use database SNOWFLAKEDATABASE
+
+drop table SNOWFLAKESCHEMA.CLEANED_DATAcleaned_data
+
+
+-- Replace <database_name> with your target database name
+USE DATABASE snowflakedatabase;
+
+-- Replace <schema_name> with your target schema name
+USE SCHEMA snowflakeschema;
+
+-- Create the table with the specified schema
+CREATE OR REPLACE TABLE customer_purchases (
+    CustomerID INTEGER,
+    Year INTEGER,
+    Month INTEGER,
+    TotalPurchases BIGINT,
+    AveragePurchaseQuantity DOUBLE
+);
+
+drop column Year INTEGER from customer_purchases
+
+------------------------------------------------------------
+
+-- Check if the database exists
+SHOW DATABASES LIKE 'SNOWFLAKEDATABASE';
+
+-- Check if the role exists
+SHOW ROLES LIKE 'ACCOUNTADMIN';
+
+-- Check if the warehouse exists
+SHOW WAREHOUSES LIKE 'COMPUTE_WH';
+
+-- Check the grants for the user
+SHOW GRANTS TO USER 'ACCOUNTADMIN';
+
+SELECT CURRENT_ACCOUNT();
+
+
+SELECT current_region() AS region,
+       current_account() AS account_name;
+
+servername: cuoipnx-qg65241.AZURE_CANADACENTRAL.snowflakecomputing.com
+
+
